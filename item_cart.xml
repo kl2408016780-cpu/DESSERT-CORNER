@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:strokeWidth="1dp"
+    app:strokeColor="#FFE4E1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Item Image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivCartItem"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/choco_lava"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CornerImageView"
+            android:contentDescription="Dessert Image" />
+
+        <!-- Item Details -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvCartItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dessert Name"
+                android:textColor="@color/login_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCartItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="RM0.00"
+                android:textColor="@color/login_secondary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Quantity Controls -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#FFE4E1"
+            android:padding="4dp"
+            android:layout_gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnDecreaseQty"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_minus"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:padding="6dp"
+                app:tint="@color/login_primary"
+                android:contentDescription="Decrease quantity" />
+
+            <TextView
+                android:id="@+id/tvCartItemQty"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:gravity="center"
+                android:textColor="@color/login_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnIncreaseQty"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_plus"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:padding="6dp"
+                app:tint="@color/login_primary"
+                android:contentDescription="Increase quantity" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
